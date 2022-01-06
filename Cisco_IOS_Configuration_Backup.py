@@ -33,7 +33,7 @@ with open("target_devices.csv", "r") as f:
             connection = netmiko.ConnectHandler(**cisco_device)
 
         except (netmiko.ssh_exception.NetmikoTimeoutException,netmiko.ssh_exception.NetmikoAuthenticationException):
-            print(f'There has been an error while connecting to {row[1]}')
+            print()
             unsuccessful_devices.append(row[1])
             continue
 
